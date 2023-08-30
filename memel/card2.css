@@ -1,0 +1,38 @@
+
+
+.card{width: 300px;
+height: 450;
+position:relative;
+perspective: 900px;
+align-content: start;
+margin-left: 1200px; margin-right: 400px;
+margin-top: 5px;
+}
+.front, .back{
+    width: 300;
+    height: 450;
+    position:absolute;
+    backface-visibility: hidden;
+    transition: all 2s;
+    border: 5px solid rgb(191, 238, 247);
+    border-radius: 50%;
+    box-shadow:20px;
+    display: flex;  
+    align-items: center;
+    justify-content:end;
+    cursor:none
+    
+}
+
+.front{
+    background-image: url(https://i.pinimg.com/564x/52/71/7c/52717cc78b0caee62f81c209ebbac546.jpg);
+    color: rgb(0, 0, 0);
+    border: 0px;
+}
+
+.back {background-image: url(https://i.pinimg.com/564x/53/22/f7/5322f7eeb251e0048cb808ed18765a68.jpg);
+transform: rotateY;
+}
+
+.card:hover .front {transform: rotateY(150deg);}
+.card:hover .back {transform: rotateY(0);}
